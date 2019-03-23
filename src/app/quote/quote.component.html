@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row" *ngFor="let quote of quotes;let i = 'index'">
         <div class="row">
-            <h4 id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h4>
+            <p id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</p>
             <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
         </div>
 
@@ -21,5 +21,3 @@
 </div>
 
 </div>
-
-<p *ngIf='goals.length > 5'>You have too many goals</p>
