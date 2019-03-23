@@ -17,7 +17,7 @@ export class QuoteComponent implements OnInit {
     new Quote(6, 'We are tangled,knotted,locked,and tied to each other forever', 'William Shakespere', new Date(2019, 7, 27)),
     new Quote(7, 'Surely,am being rewarded cause I have you', 'Harry Potter', new Date(2019, 12, 18)),
   ]
-  DeleteQuote(isComplete, index) {
+  deleteQuote(isComplete, index) {
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want
         to delete ${this.quotes[index].name}`)
