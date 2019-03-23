@@ -16,6 +16,7 @@ export class QuoteComponent implements OnInit {
     new Quote(5, 'Ill forever carry you and hold you in my heart', 'Terrence J', new Date(2019, 5, 1)),
     new Quote(6, 'We are tangled,knotted,locked,and tied to each other forever', 'William Shakespere', new Date(2019, 7, 27)),
     new Quote(7, 'Surely,am being rewarded cause I have you', 'Harry Potter', new Date(2019, 12, 18)),
+    new Quote(8, 'Saying you are beautiful is an understatement', 'Oruko Pius', new Date(2019, 6, 23)),
   ]
   deleteQuote(isComplete, index) {
     if (isComplete) {
