@@ -1,22 +1,13 @@
-<h1>Qoutes App</h1>
-<div class="container-fluid">
+<h1>My Quotes</h1>
+<div class="container">
   <div class="row">
-    <div class="col-md-6">
-      <app-quote-form></app-quote-form>
-
-    </div>
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
-
-</div>
-<hr>
-<div class="container-fluid">
-  <div class="row" *ngFor="let quote of quotes;let i = 'index'">
+  <hr>
+  <div class="row" *ngFor='let quote of quotes;let i =index'>
     <div class="row">
-      <div class="col-md-6">
-
-        <p id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</p>
-        <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
-      </div>
+      <li id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
+      <button class="btn btn-success" (click)='toogleDetails(i)'>Toogle Details</button>
     </div>
 
     <div class="row" *ngIf="quote.showDescription">
