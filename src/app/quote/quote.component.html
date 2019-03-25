@@ -1,5 +1,7 @@
 <h1>My Quotes</h1>
+
 <div class="container">
+
   <div class="row">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
@@ -16,4 +18,5 @@
 
   </div>
 
+<p *ngIf='quotes.length > 7'>You have too many Quotes</p>
 </div>

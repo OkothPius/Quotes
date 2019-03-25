@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: any): number {
     let today:Date = new Date(); //get currentr date and nativeElement
     let todayWithNoTime:any = new Date(today.getFullYear(),today.getMonth(),today.getDate())
     var dateDifference =Math.abs(value-todayWithNoTime) //returns value in milliseconds
@@ -16,7 +16,7 @@ export class DateCountPipe implements PipeTransform {
     var dateCounter=dateDifferenceSeconds/secondsInADay;
 
     if (dateCounter >= 1 && value > todayWithNoTime){
-      return dateCounter;
+      return dateCounter
     }else{
       return 0;
     }
