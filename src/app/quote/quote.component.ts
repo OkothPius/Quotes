@@ -9,11 +9,14 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote(1, 'Emilia Clarke', 'I surrendered my heart to you the day we met', new Date(2010, 2, 18)),
-    new Quote(2, 'Stefflon Don','The story of my life is all about you,my love', new Date(2009, 0, 7)),
-    new Quote(3, 'Chris Adams','Ill love you,honour you,cherish you till the day I die', new Date(1970, 6, 26)),
-    new Quote(4, 'Pablo Lyle','Lying beside you make me feel blessed', new Date(2001, 11, 12)),
+    new Quote(1, 'Emilia Clarke', 'I surrendered my heart to you the day we met','admin', new Date(2010, 2, 18)),
+    new Quote(2, 'Stefflon Don','The story of my life is all about you,my love','admin', new Date(2009, 0, 7)),
+    new Quote(3, 'William Shakesphere','Lying beside you make me feel blessed','admin', new Date(2001, 11, 12)),
   ]
+
+  showDescription= false;//boolean setting to hide and display
+
+
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
@@ -24,18 +27,15 @@ export class QuoteComponent implements OnInit {
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
 
-      if (toDelete) {
-        this.quotes.splice(index, 1);
-      }
+      if (toDelete) {this.quotes.splice(index, 1) }//removes quote
     }
   }
 
-  toogleQuote(index) {
-    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  toogleQuote() {
+    this.showDescription = !this.showDescription;//show or hide content
   }
 
 
-  constructor() { }
   ngOnInit() {
   }
 

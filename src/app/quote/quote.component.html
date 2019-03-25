@@ -1,6 +1,7 @@
-<div class="container">
+<div class="container" id="thee">
   <div class="jumbotron">
-    <h1>Love Quotes!</h1>
+    <p>Love Quotes!</p>
+    <h6>Inspiring Love quotes</h6>
   </div>
 
   <div class="container">
@@ -14,8 +15,10 @@
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
       <div class="col-8" id="two">
-        <div class="row" <h3>My Quotes</h3>
+        <div class="row" id="lol">
+        <h3>My Quotes</h3>
         </div>
+
         <div class="card" id="crd" *ngFor='let quote of quotes;let i =index'>
           <div class="card-title">
             <h5 font color="blue" *ngIf="showDescription">{{quote.name}} </h5>
