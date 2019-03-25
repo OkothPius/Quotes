@@ -7,7 +7,7 @@
 ## Description
 
 _An application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. _
-_LIVE LINK:_.
+_DEPLOYED LINK:https://okothpius.github.io/Quotes_.
 
 ## Behavior Driven Development(BDD)
 
